@@ -1,0 +1,82 @@
+.contact {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @include d(s) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.contact form {
+  label {
+    @include type-1(18);
+    display: block;
+  }
+
+  input[type="text"], textarea {
+    @include type-2(18);
+    color: $gray;
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    border: 2px solid $beige-dark;
+    background: transparent;
+    margin-bottom: 1em;
+    &:hover, &:focus {
+      outline: none;
+      border-color: $beige-medium;
+    }
+  }
+
+  textarea {
+    height: 120px;
+  }
+}
+
+input.button {
+  @include type-1(18);
+  cursor: pointer;
+  color: $beige-dark;
+  text-transform: uppercase;
+  border: 2px solid $beige-dark;
+  background: transparent;
+  display: block;
+  width: 200px;
+  padding-top: 5px;
+  @include box-shadow(5px 5px 0 -2px $beige-medium, 5px 5px 0 0 $beige-dark);
+  transition: .3s;
+  &:hover {
+    @include box-shadow(3px 3px 0 -2px $beige-medium, 3px 3px 0 0 $beige-dark);
+  }
+}
+
+.contact-info {
+  display: block;
+  color: $beige-dark;
+  margin-bottom: 3em;
+  margin-top: 2em;
+  @include d(l) {
+    float: right;
+    text-align: right;
+    margin-top: -3em;
+  }
+
+  p::after {
+    content: " ////"
+  }
+}
+
+.contact-map {
+  display: block;
+  @include box-shadow(0 0 0 10px $beige-medium);
+  clear: both;
+
+  img {
+    width: 100%;
+  }
+
+  transition: .3s;
+  &:hover {
+    @include box-shadow(0 0 0 6px $beige-medium);
+  }
+}
