@@ -1,0 +1,25 @@
+{
+  "name": "lescone",
+  "version": "1.0.0",
+  "description": "A example project created on CSS com SASS course by Origamid.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxmaccari/lescone.git"
+  },
+  "keywords": [
+    "example",
+    "typography",
+    "sass",
+    "website"
+  ],
+  "author": "Maxsuel Maccari <maxmaccari@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxmaccari/lescone/issues"
+  },
+  "homepage": "https://github.com/maxmaccari/lescone#readme"
+}
