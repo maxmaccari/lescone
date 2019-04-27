@@ -1,0 +1,21 @@
+.footer {
+  padding: 20px 0;
+  background: $gray;
+  @include box-shadow(0 0 0 10px $gray);
+
+  p {
+    color: $beige-light;
+    @include d(s) {
+      text-align: center;
+    }
+  }
+
+  a img {
+    float: right;
+    margin-top: -1.5em;
+    @include d(s) {
+      float: none;
+      margin: 20px auto;
+    }
+  }
+}

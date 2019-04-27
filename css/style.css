@@ -516,3 +516,33 @@ input.button:hover {
   -moz-box-shadow: 0 0 0 6px #cbc6b9;
   box-shadow: 0 0 0 6px #cbc6b9;
 }
+
+.footer {
+  padding: 20px 0;
+  background: #2a2426;
+  -webkit-box-shadow: 0 0 0 10px #2a2426;
+  -moz-box-shadow: 0 0 0 10px #2a2426;
+  box-shadow: 0 0 0 10px #2a2426;
+}
+
+.footer p {
+  color: #edece4;
+}
+
+@media screen and (max-width: 479px) {
+  .footer p {
+    text-align: center;
+  }
+}
+
+.footer a img {
+  float: right;
+  margin-top: -1.5em;
+}
+
+@media screen and (max-width: 479px) {
+  .footer a img {
+    float: none;
+    margin: 20px auto;
+  }
+}
