@@ -32,10 +32,3 @@ $type-2: 'Aref Ruqaa', serif;
     line-height: em(30, 24);
   }
 }
-
-// Box-shadow
-@mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-  -moz-box-shadow: $shadow;
-  box-shadow: $shadow;
-}

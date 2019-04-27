@@ -1,7 +1,7 @@
 .footer {
   padding: 20px 0;
   background: $gray;
-  @include box-shadow(0 0 0 10px $gray);
+  box-shadow: 0 0 0 10px $gray;
 
   p {
     color: $beige-light;

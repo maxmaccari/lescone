@@ -43,10 +43,12 @@ input.button {
   display: block;
   width: 200px;
   padding-top: 5px;
-  @include box-shadow(5px 5px 0 -2px $beige-medium, 5px 5px 0 0 $beige-dark);
+  box-shadow: 5px 5px 0 -2px $beige-medium,
+              5px 5px 0 0 $beige-dark;
   transition: .3s;
   &:hover {
-    @include box-shadow(3px 3px 0 -2px $beige-medium, 3px 3px 0 0 $beige-dark);
+    box-shadow: 3px 3px 0 -2px $beige-medium,
+                3px 3px 0 0 $beige-dark;
   }
 }
 
@@ -68,7 +70,7 @@ input.button {
 
 .contact-map {
   display: block;
-  @include box-shadow(0 0 0 10px $beige-medium);
+  box-shadow: 0 0 0 10px $beige-medium;
   clear: both;
 
   img {
@@ -77,6 +79,6 @@ input.button {
 
   transition: .3s;
   &:hover {
-    @include box-shadow(0 0 0 6px $beige-medium);
+    box-shadow:0 0 0 6px $beige-medium;
   }
 }
