@@ -1,0 +1,51 @@
+.menu {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @include d(s) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.menu-item {
+  margin-bottom: 60px;
+
+  h2 {
+    @include type-2(24);
+    margin-bottom: 1em;
+  }
+
+  li {
+    @include type-1(18);
+    line-height: em(38, 18);
+
+    span {
+      font-family: $type-2;
+      color: $beige-dark;
+      display: inline-block;
+      width: 70px;
+      text-align: right;
+      margin-right: 10px;
+      margin-left: -80px;
+      @include d(s) {
+        margin-left: 0;
+        width: auto;
+      }
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    border: 10px solid $beige-medium;
+    position: absolute;
+    right: 0px;
+    margin-top: 60px;;
+    @include d(l) {
+      right: 120px;
+    }
+    @include d(s) {
+      width: 120px;
+      margin-top: 0;
+    }
+  }
+}
