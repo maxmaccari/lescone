@@ -3,34 +3,40 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 
-function compileSass () {
-  return gulp.src('scss/*.scss')
+const buildStyles = () => {
+  return gulp.src('src/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('css/'))
+    .pipe(gulp.dest('public/css/'))
     .pipe(browserSync.stream());
-}
+};
 
-gulp.task('sass', compileSass);
+const copyStatic = () => {
+  return gulp.src('src/static/**/*')
+    .pipe(gulp.dest('public/'))
+    .pipe(browserSync.stream());
+};
 
-function browser () {
+function server () {
   browserSync.init({
     server: {
-      baseDir: './'
+      baseDir: 'public/'
     }
-  })
-}
-
-gulp.task('browser-sync', browser);
+  });
+};
 
 function watch () {
-  gulp.watch('scss/*.scss', compileSass);
-  gulp.watch('./**/*.html').on('change', browserSync.reload);
-}
+  gulp.watch('src/scss/**/*.scss', buildStyles);
+  gulp.watch('src/static/*/**', copyStatic);
+};
 
+// Tasks
+gulp.task('styles', buildStyles);
+gulp.task('static', copyStatic);
+gulp.task('build', gulp.parallel('styles', 'static'));
 gulp.task('watch', watch);
-
-gulp.task('default', gulp.parallel('watch', 'browser-sync'));
+gulp.task('server', server);
+gulp.task('default', gulp.parallel('build', 'watch', 'server'));

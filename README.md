@@ -7,7 +7,7 @@ I'm gonna improve this project by my free time.
 
 ## Changes that I'm gonna make during the time
 - [x] Use git on this project
-- [ ] Configure a npm workflow to build the project
+- [x] Configure a npm workflow to build the project
 - [ ] Install linter for CSS and Javascript
 - [ ] Implement a javascript function to tell if the restaurant is open
 - [ ] Use em to style code instead px
