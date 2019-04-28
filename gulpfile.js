@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
+const imagemin = require('gulp-imagemin');
 
 const buildStyles = () => {
   return gulp.src('src/scss/**/*.scss')
@@ -13,6 +14,12 @@ const buildStyles = () => {
     .pipe(gulp.dest('public/css/'))
     .pipe(browserSync.stream());
 };
+
+const minifyImages = () => {
+  return gulp.src('src/img/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('public/img'))
+}
 
 const copyStatic = () => {
   return gulp.src('src/static/**/*')
@@ -35,8 +42,9 @@ function watch () {
 
 // Tasks
 gulp.task('styles', buildStyles);
+gulp.task('images', minifyImages);
 gulp.task('static', copyStatic);
-gulp.task('build', gulp.parallel('styles', 'static'));
+gulp.task('build', gulp.parallel('styles', 'static', 'images'));
 gulp.task('watch', watch);
 gulp.task('server', server);
 gulp.task('default', gulp.parallel('build', 'watch', 'server'));
