@@ -12,6 +12,6 @@ I'm gonna improve this project by my free time.
 - [ ] Implement a javascript function to tell if the restaurant is open
 - [ ] Use em to style code instead px
 - [ ] Use normalize instead reset
-- [ ] Improve responsiveness for mobile and tablet users
+- [x] Improve responsiveness for mobile and tablet users
 - [ ] Style the code in the way I like to code
 - [ ] Create an API to receive contact form

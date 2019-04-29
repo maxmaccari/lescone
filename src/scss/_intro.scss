@@ -21,10 +21,17 @@
     border-bottom: 2px solid $gray;
     padding-bottom: 10px;
   }
+
+  @include d(m) {
+    font-size: em(14);
+  }
 }
 
 .intro-phone {
   color: $beige-dark;
+  @include d(m) {
+    font-size: em(16);
+  }
   @include d(s) {
     margin-bottom: 40px;
   }
@@ -39,7 +46,7 @@
 
     @include d(m) {
       margin-top: 80px;
-      font-size: 160px;
+      font-size: 150px;
       letter-spacing: -70px;
     }
 
@@ -56,6 +63,10 @@
   border-radius: 50%;
   background: $green;
   margin-left: 30px;
+
+  @include d(m) {
+    margin-left: 1em;
+  }
 }
 
 .intro-photo {
