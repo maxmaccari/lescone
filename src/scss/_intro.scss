@@ -2,75 +2,76 @@
   margin-top: 20px;
 }
 
-  .intro__info {
-    border-right: 2px solid $gray;
-    margin-top: 20px;
+.intro__info {
+  border-right: 2px solid $gray;
+  margin-top: 20px;
 
-    @include break('small') {
-      font-size: em(14);
-    }
-
-    @include break('medium') {
-      font-size: em(18);
-    }
+  @include break('small') {
+    font-size: em(14);
   }
 
-  .intro__schedule, .intro__address {
-    margin-top: 20px;
+  @include break('medium') {
+    font-size: em(18);
   }
+}
 
-  .intro__schedule {
-    border-bottom: 2px solid $gray;
-    padding-bottom: 20px;
-  }
+.intro__schedule,
+.intro__address {
+  margin-top: 20px;
+}
 
-  .intro__phone {
-    color: $beige-dark;
-    margin-top: 10px;
+.intro__schedule {
+  border-bottom: 2px solid $gray;
+  padding-bottom: 20px;
+}
 
-    @include break('medium') {
-      &::after {
-        content: "/ / / /";
-        display: block;
-        margin-top: 80px;
-        margin-bottom: 100px;
-        font-size: 150px;
-        letter-spacing: -70px;
-        color: $gray;
+.intro__phone {
+  color: $beige-dark;
+  margin-top: 10px;
 
-        @include break('wide') {
-          margin-top: 200px;
-          font-size: 220px;
-          letter-spacing: -90px;
-        }
+  @include break('medium') {
+    &::after {
+      content: '/ / / /';
+      display: block;
+      margin-top: 80px;
+      margin-bottom: 100px;
+      font-size: 150px;
+      letter-spacing: -70px;
+      color: $gray;
+
+      @include break('wide') {
+        margin-top: 200px;
+        font-size: 220px;
+        letter-spacing: -90px;
       }
     }
   }
+}
 
-  .intro__status {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+.intro__status {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 30px;
+
+  @include break('small') {
+    margin-left: 0;
+  }
+
+  @include break('medium') {
     margin-left: 30px;
-
-    @include break('small') {
-      margin-left: 0;
-    }
-
-    @include break('medium') {
-      margin-left: 30px;
-    }
   }
+}
 
-    .intro__status--open {
-      background: $green;
-    }
+.intro__status--open {
+  background: $green;
+}
 
-    .intro__status--closed {
-      background: $gray;
-    }
+.intro__status--closed {
+  background: $gray;
+}
 
-  .intro__photo {
-    margin-top: 20px;
-  }
+.intro__photo {
+  margin-top: 20px;
+}

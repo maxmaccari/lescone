@@ -4,21 +4,21 @@
   box-shadow: 0 0 0 10px $gray;
 }
 
-  .footer__copy {
-    color: $beige-light;
-    text-align: center;
+.footer__copy {
+  color: $beige-light;
+  text-align: center;
 
-    @include break('wide') {
-      text-align: left;
-    }
+  @include break('wide') {
+    text-align: left;
   }
+}
 
-  .footer__logo {
-    margin: 20px auto;
+.footer__logo {
+  margin: 20px auto;
 
-    @include break('medium') {
-      margin: 0;
-      float: right;
-      margin-top: -1.5em;
-    }
+  @include break('medium') {
+    margin: 0;
+    float: right;
+    margin-top: -1.5em;
   }
+}

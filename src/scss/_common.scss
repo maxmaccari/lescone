@@ -1,6 +1,6 @@
 .section-title {
   @include type-1(18);
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 
   font-weight: normal;
   text-transform: uppercase;
@@ -45,8 +45,7 @@
   transition: .3s;
 
   &:hover {
-    box-shadow: 3px 3px 0 -2px $beige-medium,
-                3px 3px 0 0 $beige-dark;
+    box-shadow: 3px 3px 0 -2px $beige-medium, 3px 3px 0 0 $beige-dark;
   }
 }
 
@@ -54,14 +53,14 @@
   border: 10px solid $beige-medium;
 }
 
-  .framed--hoverable {
-    border-width: 0;
-    box-shadow: 0 0 0 10px $beige-medium;
-    transition: .3s;
-    margin: 10px;
-    width: calc(100% - 20px);
+.framed--hoverable {
+  border-width: 0;
+  box-shadow: 0 0 0 10px $beige-medium;
+  transition: .3s;
+  margin: 10px;
+  width: calc(100% - 20px);
 
-    &:hover {
-      box-shadow:0 0 0 6px $beige-medium;
-    }
+  &:hover {
+    box-shadow: 0 0 0 6px $beige-medium;
   }
+}

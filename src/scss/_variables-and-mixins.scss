@@ -1,4 +1,6 @@
-/*-- Colors --*/
+//------------
+//-- Colors --
+//------------
 $beige-light: #edece4;
 $beige-medium: #cbc6b9;
 $beige-dark: #988c77;
@@ -6,7 +8,7 @@ $gray: #2a2426;
 $green: #1ab912;
 
 
-/*-- Typography --*/
+//-- Typography --
 $type-1: 'PT Mono', monospace;
 $type-2: 'Aref Ruqaa', serif;
 
@@ -27,15 +29,15 @@ $type-2: 'Aref Ruqaa', serif;
   @if $size == 18 {
     font-size: em(18);
     line-height: em(30, 18);
-  }
-  @else if $size == 24 {
+  } @else if $size == 24 {
     font-size: em(24);
     line-height: em(30, 24);
   }
 }
 
-
-/*-- Grid Layout --*/
+//----------------
+//-- Typography --
+//----------------
 $cols: 12;
 $gutter: 20px;
 
@@ -49,18 +51,15 @@ $break-small: 480px;
     @media screen and (min-width: #{$break-small + 1}) {
       @content;
     }
-  }
-  @else if $size == 'medium' {
+  } @else if $size == 'medium' {
     @media screen and (min-width: #{$break-medium}) {
       @content;
     }
-  }
-  @else if $size == 'wide' {
+  } @else if $size == 'wide' {
     @media screen and (min-width: #{$break-wide}) {
       @content;
     }
-  }
-  @else {
+  } @else {
     @media screen and (min-width: #{$size}) {
       @content;
     }
@@ -78,10 +77,11 @@ $break-small: 480px;
 }
 
 @mixin clearfix {
-  &::after, &::before {
+  &::after,
+  &::before {
+    clear: both;
     content: '';
     display: table;
-    clear: both;
   }
 }
 
@@ -92,10 +92,11 @@ $break-small: 480px;
   padding-right: 10px;
 
   @include break('small') {
-    position: relative;
+    margin: 0 auto;
     max-width: $break-medium;
-    margin: 0px auto;
+    position: relative;
   }
+
   @include break('wide') {
     max-width: $break-wide;
   }

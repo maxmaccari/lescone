@@ -1,4 +1,6 @@
-/*-- Grids --*/
+//-----------
+//-- Grids --
+//-----------
 %grid-structure {
   width: 100%;
 
@@ -19,8 +21,9 @@
   }
 }
 
-
-/*-- Offsets --*/
+//--------------
+//-- Offsets --
+//--------------
 @for $i from 1 through $cols {
   .l-offset-#{$i} {
     @include break('small') {
@@ -30,13 +33,16 @@
 }
 
 
-/*-- Container --*/
+//---------------
+//-- Container --
+//---------------
 .l-container {
   @include container;
 }
 
-
-/*-- Row --*/
+//---------
+//-- Row --
+//---------
 .l-row {
   @include row;
 }

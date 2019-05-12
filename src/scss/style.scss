@@ -1,16 +1,14 @@
 // Settings
-@import "variables-and-mixins";
+@import 'variables-and-mixins';
 
 // Base
-@import "normalize";
-@import "elements";
-@import "layout";
-
-// Objects
-@import "objects";
+@import 'normalize';
+@import 'elements';
+@import 'layout';
 
 // Components
-@import "intro";
-@import "menu";
-@import "contact";
-@import "footer";
+@import 'common';
+@import 'intro';
+@import 'menu';
+@import 'contact';
+@import 'footer';

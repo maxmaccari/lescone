@@ -1,7 +1,11 @@
-/*-- General --*/
+//-------------
+//-- General --
+//-------------
 
 // Set all elements box sizing as border box
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -21,14 +25,16 @@ p {
   margin: 0;
 }
 
-/*-- Form --*/
-
+//----------
+//-- Form --
+//----------
 label {
   @include type-1(18);
   display: block;
 }
 
-input[type="text"], textarea {
+input[type='text'],
+textarea {
   @include type-2(18);
   width: 100%;
   height: 40px;
@@ -40,7 +46,8 @@ input[type="text"], textarea {
 
   color: $gray;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     outline: none;
     border-color: $beige-medium;
   }
