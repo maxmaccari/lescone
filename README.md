@@ -11,7 +11,8 @@ I'm gonna improve this project by my free time.
 - [ ] Install linter for CSS and Javascript
 - [ ] Implement a javascript function to tell if the restaurant is open
 - [ ] Use em to style code instead px
-- [ ] Use normalize instead reset
+- [x] Use normalize instead reset
+- [x] Use mobile first approach
 - [x] Improve responsiveness for mobile and tablet users
-- [ ] Style the code in the way I like to code
+- [x] Style the code in the way I like to code
 - [ ] Create an API to receive contact form
