@@ -4,7 +4,7 @@
 %grid-structure {
   width: 100%;
 
-  @include break('small') {
+  @include break('medium') {
     float: left;
     min-height: 1px;
     margin-left: $gutter / 2;
@@ -15,7 +15,7 @@
 @for $i from 1 through $cols {
   .l-grid-#{$i} {
     @extend %grid-structure;
-    @include break('small') {
+    @include break('medium') {
       width: grid-size($i);
     }
   }
@@ -26,7 +26,7 @@
 //--------------
 @for $i from 1 through $cols {
   .l-offset-#{$i} {
-    @include break('small') {
+    @include break('medium') {
       margin-left: grid-size($i, 'offset');
     }
   }

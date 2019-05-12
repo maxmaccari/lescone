@@ -14,15 +14,15 @@
     margin-top: 14px;
     background: $gray;
 
-    @include break('small') {
+    @include break('medium') {
       width: 40%;
     }
 
-    @include break('medium') {
+    @include break('large') {
       width: 60%;
     }
 
-    @include break('wide') {
+    @include break('x-large') {
       width: 75%;
     }
   }

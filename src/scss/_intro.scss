@@ -6,11 +6,11 @@
   border-right: 2px solid $gray;
   margin-top: 20px;
 
-  @include break('small') {
+  @include break('medium') {
     font-size: em(14);
   }
 
-  @include break('medium') {
+  @include break('large') {
     font-size: em(18);
   }
 }
@@ -29,7 +29,7 @@
   color: $beige-dark;
   margin-top: 10px;
 
-  @include break('medium') {
+  @include break('large') {
     &::after {
       content: '/ / / /';
       display: block;
@@ -39,7 +39,7 @@
       letter-spacing: -70px;
       color: $gray;
 
-      @include break('wide') {
+      @include break('x-large') {
         margin-top: 200px;
         font-size: 220px;
         letter-spacing: -90px;
@@ -55,11 +55,11 @@
   border-radius: 50%;
   margin-left: 30px;
 
-  @include break('small') {
+  @include break('medium') {
     margin-left: 0;
   }
 
-  @include break('medium') {
+  @include break('large') {
     margin-left: 30px;
   }
 }

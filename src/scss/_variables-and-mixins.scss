@@ -44,22 +44,23 @@ $type-2: 'Aref Ruqaa', serif;
 $cols: 12;
 $gutter: 20px;
 
-$break-wide: 1200px;
-$break-medium: 760px;
-$break-small: 480px;
+// The layout is Mobile for default
+$break-medium: 480px; // For tablets and small resolution screens on computers
+$break-large: 760px; // For most of computers screens
+$break-x-large: 1200px; // For high resolution screens
 
 // Breakpoints
 @mixin break($size) {
-  @if $size == 'small' {
-    @media screen and (min-width: #{$break-small + 1}) {
+  @if $size == 'medium' {
+    @media screen and (min-width: #{$break-medium + 1}) {
       @content;
     }
-  } @else if $size == 'medium' {
-    @media screen and (min-width: #{$break-medium}) {
+  } @else if $size == 'large' {
+    @media screen and (min-width: #{$break-large}) {
       @content;
     }
-  } @else if $size == 'wide' {
-    @media screen and (min-width: #{$break-wide}) {
+  } @else if $size == 'x-large' {
+    @media screen and (min-width: #{$break-x-large}) {
       @content;
     }
   } @else {
@@ -90,18 +91,18 @@ $break-small: 480px;
 
 @mixin container {
   @include clearfix;
-  max-width: $break-small;
+  max-width: $break-medium;
   padding-left: 10px;
   padding-right: 10px;
 
-  @include break('small') {
+  @include break('medium') {
     margin: 0 auto;
-    max-width: $break-medium;
+    max-width: $break-large;
     position: relative;
   }
 
-  @include break('wide') {
-    max-width: $break-wide;
+  @include break('x-large') {
+    max-width: $break-x-large;
   }
 }
 
@@ -109,7 +110,7 @@ $break-small: 480px;
   @include clearfix;
   position: relative;
 
-  @include break('small') {
+  @include break('medium') {
     margin-left: -$gutter / 2;
     margin-right: -$gutter / 2;
   }

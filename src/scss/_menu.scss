@@ -2,7 +2,7 @@
   margin-bottom: 60px;
   margin-top: 60px;
 
-  @include break('medium') {
+  @include break('large') {
     margin-bottom: 120px;
     margin-top: 120px;
   }
@@ -18,7 +18,7 @@
   margin-bottom: 20px;
   position: relative;
 
-  @include break('medium') {
+  @include break('large') {
     margin-bottom: 60px;
   }
 }
@@ -36,7 +36,7 @@
   text-align: right;
   margin-right: 10px;
 
-  @include break('small') {
+  @include break('medium') {
     width: 70px;
     margin-left: -80px;
   }
@@ -46,13 +46,13 @@
   border-radius: 50%;
   margin: auto;
 
-  @include break('medium') {
+  @include break('large') {
     position: absolute;
     right: 0;
     top: 20px;
   }
 
-  @include break('wide') {
+  @include break('x-large') {
     position: absolute;
     right: 120px;
     top: 20px;

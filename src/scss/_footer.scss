@@ -8,7 +8,7 @@
   color: $beige-light;
   text-align: center;
 
-  @include break('wide') {
+  @include break('x-large') {
     text-align: left;
   }
 }
@@ -16,7 +16,7 @@
 .footer__logo {
   margin: 20px auto;
 
-  @include break('medium') {
+  @include break('large') {
     margin: 0;
     float: right;
     margin-top: -1.5em;
