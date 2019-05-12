@@ -29,13 +29,16 @@ label {
 
 input[type="text"], textarea {
   @include type-2(18);
-  color: $gray;
   width: 100%;
-  padding: 0 5px;
   height: 40px;
-  border: 2px solid $beige-dark;
-  background: transparent;
   margin-bottom: 1em;
+  padding: 0 5px;
+
+  background: transparent;
+  border: 2px solid $beige-dark;
+
+  color: $gray;
+
   &:hover, &:focus {
     outline: none;
     border-color: $beige-medium;

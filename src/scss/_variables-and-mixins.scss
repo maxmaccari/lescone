@@ -92,9 +92,9 @@ $break-small: 480px;
   padding-right: 10px;
 
   @include break('small') {
-    margin: 0px auto;
     position: relative;
     max-width: $break-medium;
+    margin: 0px auto;
   }
   @include break('wide') {
     max-width: $break-wide;
