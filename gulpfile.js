@@ -6,6 +6,8 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const eslint = require('gulp-eslint');
+const sassLint = require('gulp-sass-lint');
+
 
 const buildJavascript = () => {
   return gulp.src('src/js/main.js')
@@ -33,6 +35,13 @@ const buildStyles = () => {
     .pipe(browserSync.stream());
 };
 
+const lintStyles = () => {
+  return gulp.src('src/scss/**/*.scss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+};
+
 const minifyImages = () => {
   return gulp.src('src/img/**/*')
     .pipe(imagemin())
@@ -56,7 +65,9 @@ function server () {
 
 function watch () {
   gulp.watch('src/js/**/*.js', buildJavascript);
+  gulp.watch('src/js/**/*.js', lintJavascript);
   gulp.watch('src/scss/**/*.scss', buildStyles);
+  gulp.watch('src/scss/**/*.scss', lintStyles);
   gulp.watch('src/img/**/*', minifyImages);
   gulp.watch('src/static/**/*', copyStatic);
 };
@@ -65,9 +76,10 @@ function watch () {
 gulp.task('javascript', buildJavascript);
 gulp.task('lintJavascript', lintJavascript)
 gulp.task('styles', buildStyles);
+gulp.task('lintStyles', lintStyles);
 gulp.task('images', minifyImages);
 gulp.task('static', copyStatic);
-gulp.task('lint', gulp.series('lintJavascript'));
+gulp.task('lint', gulp.series('lintJavascript', 'lintStyles'));
 gulp.task('build', gulp.parallel('javascript', 'styles', 'static', 'images'));
 gulp.task('watch', watch);
 gulp.task('server', server);
