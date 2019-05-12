@@ -2,20 +2,23 @@
   padding: 20px 0;
   background: $gray;
   box-shadow: 0 0 0 10px $gray;
-
-  p {
-    color: $beige-light;
-    @include d(s) {
-      text-align: center;
-    }
-  }
-
-  a img {
-    float: right;
-    margin-top: -1.5em;
-    @include d(s) {
-      float: none;
-      margin: 20px auto;
-    }
-  }
 }
+
+  .footer__copy {
+    color: $beige-light;
+    text-align: center;
+
+    @include break('wide') {
+      text-align: left;
+    }
+  }
+
+  .footer__logo {
+    margin: 20px auto;
+
+    @include break('medium') {
+      margin: 0;
+      float: right;
+      margin-top: -1.5em;
+    }
+  }
