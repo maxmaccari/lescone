@@ -15,8 +15,8 @@
     }
   }
 
-  .intro__schedule, .intro__address, .intro__phone {
-    margin-top: 10px;
+  .intro__schedule, .intro__address {
+    margin-top: 20px;
   }
 
   .intro__schedule {
@@ -26,6 +26,7 @@
 
   .intro__phone {
     color: $beige-dark;
+    margin-top: 10px;
 
     @include break('medium') {
       &::after {
@@ -72,5 +73,4 @@
 
   .intro__photo {
     margin-top: 20px;
-    border: 10px solid $beige-medium;
   }

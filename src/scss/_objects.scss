@@ -49,3 +49,19 @@
                 3px 3px 0 0 $beige-dark;
   }
 }
+
+.framed {
+  border: 10px solid $beige-medium;
+}
+
+  .framed--hoverable {
+    border-width: 0;
+    box-shadow: 0 0 0 10px $beige-medium;
+    transition: .3s;
+    margin: 10px;
+    width: calc(100% - 20px);
+
+    &:hover {
+      box-shadow:0 0 0 6px $beige-medium;
+    }
+  }

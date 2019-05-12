@@ -18,6 +18,7 @@ img {
 
 p {
   @include type-1(18);
+  margin: 0;
 }
 
 /*-- Form --*/
