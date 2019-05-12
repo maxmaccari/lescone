@@ -39,7 +39,7 @@ function server () {
 function watch () {
   gulp.watch('src/scss/**/*.scss', buildStyles);
   gulp.watch('src/img/**/*', minifyImages);
-  gulp.watch('src/static/*/**', copyStatic);
+  gulp.watch('src/static/**/*', copyStatic);
 };
 
 // Tasks
