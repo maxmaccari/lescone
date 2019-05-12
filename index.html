@@ -8,59 +8,60 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="container intro">
-    <div class="grid-5">
-      <img src="img/lescone.png" alt="Le Scone" class="logo">
-      <div class="intro-info">
-        <p>
-          De Seg. à Sab.<span class="open"></span><br>
+  <main class="l-container intro">
+    <div class="l-grid-5">
+      <img src="img/lescone.png" alt="Le Scone" class="intro__logo">
+      <div class="intro__info">
+        <p class="intro__schedule">
+          De Seg. à Sab.
+          <span class="intro__status intro__status--open" title="Open"></span><br>
           das 07:00 às 18:00
         </p>
 
-        <p>
+        <p class="intro__address">
           Praia de Botafogo, 300<br>
           Rio de Janeiro - RJ
         </p>
       </div>
-      <p class="intro-phone">+55 021 2412-3333</p>
+      <p class="intro__phone">+55 021 2412-3333</p>
     </div>
-    <div class="grid-7">
-      <img class="intro-photo" src="img/foto.png" alt="Foto de Le Scone">
+    <div class="l-grid-7">
+      <img class="intro__photo framed" src="img/foto.png" alt="Foto de Le Scone">
     </div>
   </main>
 
-  <section class="container menu">
-    <h1 class="grid-4 title">Menu</h1>
-    <div class="grid-7 offset-1">
-      <div class="menu-item">
-        <h2>Entradas</h2>
-        <ul>
-          <li><span>R$1,70</span>Ovos Mexidos</li>
-          <li><span>R$2,70</span>Scones de Frutas</li>
-          <li><span>R$3,70</span>Joelho de Queijo</li>
-          <li><span>R$4,70</span>Presunto Cozido</li>
-          <li><span>R$3,70</span>Coxinha de Frango</li>
+  <section class="l-container menu">
+    <h1 class="l-grid-4 section-title">Menu</h1>
+    <div class="l-grid-7 l-offset-1">
+      <div class="menu__item">
+        <h2 class="menu__title">Entradas</h2>
+        <ul class="menu__list">
+          <li><span class="menu__price">R$1,70</span>Ovos Mexidos</li>
+          <li><span class="menu__price">R$2,70</span>Scones de Frutas</li>
+          <li><span class="menu__price">R$3,70</span>Joelho de Queijo</li>
+          <li><span class="menu__price">R$4,70</span>Presunto Cozido</li>
+          <li><span class="menu__price">R$3,70</span>Coxinha de Frango</li>
         </ul>
-        <img src="img/prato-1.png" alt="Foto Prato 1">
+        <img class="menu__photo framed" src="img/prato-1.png" alt="Foto Prato 1">
       </div>
 
-      <div class="menu-item">
-        <h2>Pratos Principais</h2>
-        <ul>
-          <li><span>R$10,70</span>Penne com Queijo</li>
-          <li><span>R$22,70</span>Feijoada</li>
-          <li><span>R$33,70</span>Constela ao Molho</li>
-          <li><span>R$14,70</span>Medalhão de Frango</li>
-          <li><span>R$13,70</span>Coxinha de Frango</li>
+      <div class="menu__item">
+        <h2 class="menu__title">Pratos Principais</h2>
+        <ul class="menu__list">
+          <li><span class="menu__price">R$10,70</span>Penne com Queijo</li>
+          <li><span class="menu__price">R$22,70</span>Feijoada</li>
+          <li><span class="menu__price">R$33,70</span>Constela ao Molho</li>
+          <li><span class="menu__price">R$14,70</span>Medalhão de Frango</li>
+          <li><span class="menu__price">R$13,70</span>Coxinha de Frango</li>
         </ul>
-        <img src="img/prato-2.png" alt="Foto Prato 2">
+        <img class="menu__photo framed" src="img/prato-2.png" alt="Foto Prato 2">
       </div>
     </div>
   </section>
 
-  <section class="container contact">
-    <h1 class="grid-4 title">Contato</h1>
-    <div class="grid-7 offset-1">
+  <section class="l-container contact">
+    <h1 class="l-grid-4 section-title">Contato</h1>
+    <div class="l-grid-7 l-offset-1">
       <form>
         <label for="name">Nome</label>
         <input type="text" id="name">
@@ -78,21 +79,23 @@
         <textarea id="message"></textarea>
         <input type="button" class="button" value="Enviar">
       </form>
-      <div class="contact-info">
+      <div class="contact__info">
         <p>contato@lescone.com</p>
         <p>+55 021 2412-3333</p>
       </div>
-      <a href="#" class="contact-map">
-        <img src="img/map.png" alt="Como chegar em Le Scone">
+      <a href="#" class="contact__map">
+        <img class="framed framed--hoverable" src="img/map.png" alt="Como chegar em Le Scone">
       </a>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">
-      <p>Le Scone © 1989 - 2016. Alguns direitos reservados.</p>
+    <div class="l-container">
+      <p class="footer__copy">
+        Le Scone © 1989 - 2016. Alguns direitos reservados.
+      </p>
       <a href="#" target="_blank">
-        <img src="img/lescone-icone.png" alt="Le Scone Icone">
+        <img class="footer__logo" src="img/lescone-icone.png" alt="Le Scone Logo">
       </a>
     </div>
   </footer>
