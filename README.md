@@ -9,7 +9,7 @@ I'm gonna improve this project by my free time.
 - [x] Use git on this project
 - [x] Configure a npm workflow to build the project
 - [ ] Install linter for CSS and Javascript
-- [ ] Implement a javascript function to tell if the restaurant is open
+- [x] Implement a javascript function to tell if the restaurant is open
 - [ ] Use em to style code instead px
 - [x] Use normalize instead reset
 - [x] Use mobile first approach
