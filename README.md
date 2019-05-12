@@ -1,4 +1,4 @@
-# Lescope
+# Lescone
 
 This is a example project created on [CSS com SASS](https://www.origamid.com/curso/css-com-sass/)
 course by [Origamid](https://www.origamid.com).
