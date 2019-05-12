@@ -1,0 +1,47 @@
+/*-- General --*/
+
+// Set all elements box sizing as border box
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: $beige-light;
+  color: $gray;
+}
+
+// Set all images responsive
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  @include type-1(18);
+}
+
+/*-- Form --*/
+
+label {
+  @include type-1(18);
+  display: block;
+}
+
+input[type="text"], textarea {
+  @include type-2(18);
+  color: $gray;
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  border: 2px solid $beige-dark;
+  background: transparent;
+  margin-bottom: 1em;
+  &:hover, &:focus {
+    outline: none;
+    border-color: $beige-medium;
+  }
+}
+
+textarea {
+  height: 120px;
+}

@@ -1,0 +1,42 @@
+/*-- Grids --*/
+%grid-structure {
+  width: 100%;
+
+  @include break('small') {
+    float: left;
+    min-height: 1px;
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+  }
+}
+
+@for $i from 1 through $cols {
+  .l-grid-#{$i} {
+    @extend %grid-structure;
+    @include break('small') {
+      width: grid-size($i);
+    }
+  }
+}
+
+
+/*-- Offsets --*/
+@for $i from 1 through $cols {
+  .l-offset-#{$i} {
+    @include break('small') {
+      margin-left: grid-size($i, 'offset');
+    }
+  }
+}
+
+
+/*-- Container --*/
+.l-container {
+  @include container;
+}
+
+
+/*-- Row --*/
+.l-row {
+  @include row;
+}

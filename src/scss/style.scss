@@ -1,11 +1,7 @@
-// General
-@import "reset";
-@import "grid";
-@import 'vars-and-mixins';
-@import 'main';
+// Settings
+@import "variables-and-mixins";
 
-// Parts
-@import "intro";
-@import "menu";
-@import "contact";
-@import "footer";
+// Base
+@import "normalize";
+@import "elements";
+@import "layout";
