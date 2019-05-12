@@ -5,6 +5,7 @@ const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
+const eslint = require('gulp-eslint');
 
 const buildJavascript = () => {
   return gulp.src('src/js/main.js')
@@ -12,6 +13,13 @@ const buildJavascript = () => {
     .pipe(uglify())
     .pipe(gulp.dest('public/js/'))
     .pipe(browserSync.stream());
+};
+
+const lintJavascript = () => {
+  return gulp.src('src/js/main.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 };
 
 const buildStyles = () => {
@@ -55,9 +63,11 @@ function watch () {
 
 // Tasks
 gulp.task('javascript', buildJavascript);
+gulp.task('lintJavascript', lintJavascript)
 gulp.task('styles', buildStyles);
 gulp.task('images', minifyImages);
 gulp.task('static', copyStatic);
+gulp.task('lint', gulp.series('lintJavascript'));
 gulp.task('build', gulp.parallel('javascript', 'styles', 'static', 'images'));
 gulp.task('watch', watch);
 gulp.task('server', server);

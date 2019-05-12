@@ -32,10 +32,25 @@
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^5.0.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.19.0",
     "tar": ">=4.4.2"
-  }
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true
+    },
+    "globals": {
+      "document": "readonly",
+      "window": "readonly"
+    }
+  },
+  "eslintIgnore": ["gulpfile.js"]
 }
