@@ -13,7 +13,7 @@ class StatusScheduler {
 
     this.element.classList.remove(this.closedClass)
     this.element.classList.add(this.openClass)
-    this.element.setAttribute('title', 'Open')
+    this.element.setAttribute('title', 'Aberto')
   }
 
   setClosed () {
@@ -21,7 +21,7 @@ class StatusScheduler {
 
     this.element.classList.remove(this.openClass)
     this.element.classList.add(this.closedClass)
-    this.element.setAttribute('title', 'Closed')
+    this.element.setAttribute('title', 'Fechado')
   }
 
   isOnSchedule () {
