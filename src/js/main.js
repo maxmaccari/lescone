@@ -50,7 +50,7 @@ class StatusScheduler {
 
     this.interval = window.setInterval(() => {
       this.updateStatus()
-    }, 1000);
+    }, 1000)
   }
 
   stop () {
@@ -77,4 +77,4 @@ const scheduleStatus = () => {
   scheduler.start()
 }
 
-document.addEventListener("DOMContentLoaded", scheduleStatus)
+document.addEventListener('DOMContentLoaded', scheduleStatus)

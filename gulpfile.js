@@ -74,7 +74,7 @@ function watch () {
 
 // Tasks
 gulp.task('javascript', buildJavascript);
-gulp.task('lintJavascript', lintJavascript)
+gulp.task('lintJavascript', lintJavascript);
 gulp.task('styles', buildStyles);
 gulp.task('lintStyles', lintStyles);
 gulp.task('images', minifyImages);

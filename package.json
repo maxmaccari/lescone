@@ -52,6 +52,11 @@
     "globals": {
       "document": "readonly",
       "window": "readonly"
+    },
+    "rules": {
+      "semi": ["error", "never"],
+      "quotes": ["error", "single"],
+      "indent": ["error", 2]
     }
   },
   "eslintIgnore": [
