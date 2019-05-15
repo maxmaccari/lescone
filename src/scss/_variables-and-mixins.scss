@@ -98,6 +98,7 @@ $break-x-large: 1200px; // For high resolution screens
   @include break('medium') {
     margin: 0 auto;
     max-width: $break-large;
+    padding: 0;
     position: relative;
   }
 

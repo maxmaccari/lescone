@@ -1,7 +1,7 @@
 .footer {
-  padding: 20px 0;
   background: $gray;
   box-shadow: 0 0 0 10px $gray;
+  padding: 20px 0;
 }
 
 .footer__copy {
@@ -17,8 +17,8 @@
   margin: 20px auto;
 
   @include break('large') {
-    margin: 0;
     float: right;
+    margin: 0;
     margin-top: -1.5em;
   }
 }

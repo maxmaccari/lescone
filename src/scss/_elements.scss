@@ -36,20 +36,18 @@ label {
 input[type='text'],
 textarea {
   @include type-2(18);
-  width: 100%;
+  background: transparent;
+  border: 2px solid $beige-dark;
+  color: $gray;
   height: 40px;
   margin-bottom: 1em;
   padding: 0 5px;
-
-  background: transparent;
-  border: 2px solid $beige-dark;
-
-  color: $gray;
+  width: 100%;
 
   &:hover,
   &:focus {
-    outline: none;
     border-color: $beige-medium;
+    outline: none;
   }
 }
 

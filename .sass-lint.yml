@@ -2,8 +2,6 @@ files:
   ignore:
     - 'src/scss/_normalize.scss'
 rules:
-  property-sort-order:
-    - order: 'smacss'
   mixins-before-declarations:
     - exclude: ['break']
   class-name-format:

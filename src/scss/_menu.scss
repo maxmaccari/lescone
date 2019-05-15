@@ -25,20 +25,20 @@
 
 .menu__list {
   @include type-1(18);
-  padding: 0;
   list-style: none;
+  padding: 0;
 }
 
 .menu__price {
-  font-family: $type-2;
   color: $beige-dark;
   display: inline-block;
-  text-align: right;
+  font-family: $type-2;
   margin-right: 10px;
+  text-align: right;
 
   @include break('medium') {
-    width: 70px;
     margin-left: -80px;
+    width: 70px;
   }
 }
 

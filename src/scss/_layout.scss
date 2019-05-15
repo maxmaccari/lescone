@@ -6,9 +6,9 @@
 
   @include break('medium') {
     float: left;
-    min-height: 1px;
     margin-left: $gutter / 2;
     margin-right: $gutter / 2;
+    min-height: 1px;
   }
 }
 
