@@ -4,9 +4,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 const buildJavascript = () => {
   return gulp.src('src/js/main.js')
+    .pipe(babel({presets: ['@babel/env']}))
     .pipe(uglify())
     .pipe(gulp.dest('public/js/'))
     .pipe(browserSync.stream());
@@ -45,7 +47,7 @@ function server () {
 };
 
 function watch () {
-  gulp.watch('src/scss/**/*.js', buildJavascript);
+  gulp.watch('src/js/**/*.js', buildJavascript);
   gulp.watch('src/scss/**/*.scss', buildStyles);
   gulp.watch('src/img/**/*', minifyImages);
   gulp.watch('src/static/**/*', copyStatic);

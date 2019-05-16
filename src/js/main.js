@@ -1,12 +1,12 @@
-var introStatusHook = 'js-intro__status'
-var schedule = {
+const introStatusHook = 'js-intro__status'
+const schedule = {
   openFrom: 1, // Monday
   openUntil: 7, // Saturday
   openAt: 8,
   closeAt: 18
 }
 
-var setOpen = function (element) {
+const setOpen = element => {
   if (element.classList.contains('intro__status--open')) return;
 
   element.classList.remove('intro__status--closed')
@@ -14,7 +14,7 @@ var setOpen = function (element) {
   element.setAttribute('title', 'Open')
 }
 
-var setClosed = function (element) {
+const setClosed = element => {
   if (element.classList.contains('intro__status--closed')) return;
 
   element.classList.remove('intro__status--open')
@@ -22,20 +22,20 @@ var setClosed = function (element) {
   element.setAttribute('title', 'Closed')
 }
 
-var isOnSchedule = function () {
-  var currentDate = new Date()
-  var currentWeekday = currentDate.getDay()
-  var currentHour = currentDate.getHours()
+const isOnSchedule = () => {
+  const currentDate = new Date()
+  const currentWeekday = currentDate.getDay()
+  const currentHour = currentDate.getHours()
 
-  var inOpenDays = currentWeekday >= schedule.openFrom &&
+  const inOpenDays = currentWeekday >= schedule.openFrom &&
     currentWeekday <= schedule.openUntil
-  var inOpenHours = currentHour >= schedule.openAt &&
+  const inOpenHours = currentHour >= schedule.openAt &&
     currentHour < schedule.closeAt
 
   return inOpenDays && inOpenHours
 }
 
-var checkStatus = function (element) {
+const checkStatus = element => {
   if (isOnSchedule()) {
     setOpen(element)
   } else {
@@ -43,8 +43,8 @@ var checkStatus = function (element) {
   }
 }
 
-var scheduleOpenStatus = function () {
-  var introStatusEl = document.getElementsByClassName(introStatusHook)[0]
+const scheduleOpenStatus = () => {
+  const introStatusEl = document.getElementsByClassName(introStatusHook)[0]
 
   window.setInterval(function(){
     checkStatus(introStatusEl)
